@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>558</width>
+    <height>518</height>
+   </rect>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>20</y>
+      <width>467</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>15</number>
+     </property>
+    </layout>
+   </widget>
+   <widget class="QTreeWidget" name="ProductsTree">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>240</y>
+      <width>150</width>
+      <height>219</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>150</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::CustomContextMenu</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <property name="tabKeyNavigation">
+     <bool>true</bool>
+    </property>
+    <property name="alternatingRowColors">
+     <bool>true</bool>
+    </property>
+    <property name="expandsOnDoubleClick">
+     <bool>false</bool>
+    </property>
+    <attribute name="headerMinimumSectionSize">
+     <number>50</number>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Изделия и спуски</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QTreeWidget" name="PropertiesTree">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>260</y>
+      <width>311</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>300</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::NoContextMenu</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <property name="alternatingRowColors">
+     <bool>true</bool>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::NoSelection</enum>
+    </property>
+    <attribute name="headerVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="headerMinimumSectionSize">
+     <number>150</number>
+    </attribute>
+    <attribute name="headerDefaultSectionSize">
+     <number>160</number>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Свойство</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Значение</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>558</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="actionFileNew"/>
+    <addaction name="actionFileOpen"/>
+    <addaction name="actionFileSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionSettings"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuProduct">
+    <property name="title">
+     <string>Изделие</string>
+    </property>
+    <addaction name="actionProductAdd"/>
+    <addaction name="actionProductDuplicate"/>
+    <addaction name="actionProductEdit"/>
+    <addaction name="actionProductDelete"/>
+    <addaction name="separator"/>
+    <addaction name="actionEditImposition"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Справка</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="separator"/>
+    <addaction name="actionHelp"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuProduct"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionFileOpen">
+   <property name="text">
+    <string>Открыть...</string>
+   </property>
+   <property name="statusTip">
+    <string>Открывает файл</string>
+   </property>
+   <property name="whatsThis">
+    <string>Открывает файл</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionProductAdd">
+   <property name="text">
+    <string>Добавить изделие...</string>
+   </property>
+   <property name="toolTip">
+    <string>Добавляет новое изделие</string>
+   </property>
+   <property name="statusTip">
+    <string>Добавляет новое изделие</string>
+   </property>
+   <property name="whatsThis">
+    <string>Добавляет новое изделие</string>
+   </property>
+   <property name="shortcut">
+    <string>+</string>
+   </property>
+  </action>
+  <action name="actionProductDelete">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Удалить изделие</string>
+   </property>
+   <property name="toolTip">
+    <string>Удаляет изделие</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="actionProductEdit">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Изменить изделие...</string>
+   </property>
+   <property name="toolTip">
+    <string>Изменение изделия</string>
+   </property>
+   <property name="shortcut">
+    <string>Return</string>
+   </property>
+  </action>
+  <action name="actionEditImposition">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Изменить спуск...</string>
+   </property>
+   <property name="toolTip">
+    <string>Изменение спуска</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="actionFileSave">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Сохранить...</string>
+   </property>
+   <property name="toolTip">
+    <string>Сохраняет файл</string>
+   </property>
+   <property name="statusTip">
+    <string>Сохраняет файл</string>
+   </property>
+   <property name="whatsThis">
+    <string>Сохраняет файл</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+   <property name="statusTip">
+    <string>Закрытие программы</string>
+   </property>
+   <property name="whatsThis">
+    <string>Закрытие программы</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::QuitRole</enum>
+   </property>
+  </action>
+  <action name="actionFileNew">
+   <property name="text">
+    <string>Новый расчёт...</string>
+   </property>
+   <property name="statusTip">
+    <string>Создает новый расчет / бланк заказа</string>
+   </property>
+   <property name="whatsThis">
+    <string>Создает новый расчет / бланк заказа</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionOrderPrint">
+   <property name="text">
+    <string>Экспорт бланка заказа в PDF...</string>
+   </property>
+   <property name="statusTip">
+    <string>Печать бланка заказа</string>
+   </property>
+   <property name="whatsThis">
+    <string>Печать бланка заказа</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>О программе...</string>
+   </property>
+   <property name="statusTip">
+    <string>Сведения о программе</string>
+   </property>
+   <property name="whatsThis">
+    <string>Сведения о программе</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::AboutRole</enum>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Справка...</string>
+   </property>
+   <property name="statusTip">
+    <string>Вызов справки</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Настройки...</string>
+   </property>
+   <property name="statusTip">
+    <string>Настройки программы</string>
+   </property>
+   <property name="whatsThis">
+    <string>Настройки программы</string>
+   </property>
+  </action>
+  <action name="actionEditOrder">
+   <property name="text">
+    <string>Изменить заказ...</string>
+   </property>
+   <property name="toolTip">
+    <string>Изменение бланка заказа</string>
+   </property>
+   <property name="statusTip">
+    <string>Изменение бланка заказа</string>
+   </property>
+   <property name="whatsThis">
+    <string>Изменение бланка заказа</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+Return</string>
+   </property>
+  </action>
+  <action name="actionProductDuplicate">
+   <property name="text">
+    <string>Дублировать изделие</string>
+   </property>
+   <property name="shortcut">
+    <string>D</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>ProductsTree</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

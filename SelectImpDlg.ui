@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SelectImpDlg</class>
+ <widget class="QDialog" name="SelectImpDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>326</width>
+    <height>347</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Выбор спуска</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>28</x>
+     <y>20</y>
+     <width>270</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Тип спуска</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>211</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QCommandLinkButton" name="clbCover">
+       <property name="text">
+        <string>Обложка</string>
+       </property>
+       <property name="shortcut">
+        <string>1</string>
+       </property>
+       <property name="description">
+        <string>Для выбора нажмите «1»</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCommandLinkButton" name="clbBlock">
+       <property name="text">
+        <string>Блок</string>
+       </property>
+       <property name="shortcut">
+        <string>2</string>
+       </property>
+       <property name="description">
+        <string>Для выбора нажмите «2»</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCommandLinkButton" name="clbBottom">
+       <property name="text">
+        <string>Подложка</string>
+       </property>
+       <property name="shortcut">
+        <string>3</string>
+       </property>
+       <property name="description">
+        <string>Для выбора нажмите «3»</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCommandLinkButton" name="clbInsert">
+       <property name="text">
+        <string>Вставка</string>
+       </property>
+       <property name="shortcut">
+        <string>4</string>
+       </property>
+       <property name="description">
+        <string>Для выбора нажмите «4»</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
